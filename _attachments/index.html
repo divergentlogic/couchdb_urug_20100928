@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JibJab</title>
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+  </head>
+  <body>
+    <h1>JibJab</h1>
+
+    <div id="pages">
+      <div id="login" class="page">
+        <div id="account"></div>
+      </div>
+
+      <div id="chat" class="page">
+        <div id="profile"></div>
+        <div id="replication"></div>
+        <div id="network"></div>
+        <div id="items"></div>
+      </div>
+    </div>
+  </body>
+  <script src="vendor/couchapp/loader.js"></script>
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      $.couch.app(function(app) {
+        $("#account").evently("account", app);
+        $("#profile").evently("profile", app);
+        $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
+        $("#replication").evently("replication", app)
+        $("#network").evently("network", app)
+        $("#items").evently("items", app);
+      });
+    });
+  </script>
+</html>

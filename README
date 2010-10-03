@@ -1,0 +1,8 @@
+Default CouchApp with client side replication.
+
+To install:
+
+couchapp push http://localhost:5984/jibjab
+
+Everybody who replicates jibjab has their host saved to a list.
+On page load, jibjab will attempt to replicate from those hosts.
