@@ -6,3 +6,6 @@ couchapp push http://localhost:5984/jibjab
 
 Everybody who replicates jibjab has their host saved to a list.
 On page load, jibjab will attempt to replicate from those hosts.
+
+This was demoed at the slc.rb meetup on Sept 28, 2010.
+Slides from the presentation are in slides.pdf
