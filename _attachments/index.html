@@ -16,7 +16,6 @@
       <div id="chat" class="page">
         <div id="profile"></div>
         <div id="replication"></div>
-        <div id="network"></div>
         <div id="items"></div>
       </div>
     </div>
@@ -29,7 +28,6 @@
         $("#profile").evently("profile", app);
         $.evently.connect("#account","#profile", ["loggedIn","loggedOut"]);
         $("#replication").evently("replication", app)
-        $("#network").evently("network", app)
         $("#items").evently("items", app);
       });
     });
